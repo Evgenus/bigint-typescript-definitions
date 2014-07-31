@@ -4,9 +4,13 @@ Typescript definitions files for [Big Integer library by Leemon](https://github.
 
 This code was detached from [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) to have repository unrestricted with community rules.
 
-Install via NPM:
+Install with NPM:
 
     npm install bigint-typescript-definitions
+
+Install with NuGet:
+    
+    PM> Install-Package BigInt.TypeScript.DefinitelyTyped 
 
 Testing:
 
