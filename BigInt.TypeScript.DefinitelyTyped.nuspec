@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BigInt.TypeScript.DefinitelyTyped</id>
+    <version>5.5.1.0</version>
+    <authors>Evgenus</authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Evgenus/bigint-typescript-definitions</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Typescript definitions files for Big Integer library by Leemon</description>
+    <releaseNotes>Initial publishing</releaseNotes>
+    <tags>bigint bignum leemon typesctipt definitions</tags>
+  </metadata>
+  <files>
+    <file src="README.md" target="" />
+    <file src="bigint\*.ts" target="src" />
+  </files>
+</package>
