@@ -1,0 +1,28 @@
+{
+  "name": "bigint-typescript-definitions",
+  "version": "5.5.1-0",
+  "description": "Typescript definitions files for Big Integer library by Leemon",
+  "scripts": {
+    "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Evgenus/bigint-typescript-definitions"
+  },
+  "keywords": [
+    "typesctipt",
+    "bigint",
+    "bignum",
+    "leemon",
+    "definitions"
+  ],
+  "author": "Eugene Chernyshov <chernyshov.eugene@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Evgenus/bigint-typescript-definitions/issues"
+  },
+  "homepage": "https://github.com/Evgenus/bigint-typescript-definitions",
+  "devDependencies": {
+    "typescript": "^1.0.1"
+  }
+}
