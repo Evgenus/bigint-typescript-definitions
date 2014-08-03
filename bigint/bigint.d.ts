@@ -76,7 +76,7 @@ declare module BigInt {
 
     // boolean millerRabin(x,b)
     // does one round of Miller-Rabin base integer b say that bigInt x is possibly prime? (b is bigInt, 1<b<x)
-    export function millerRabin(x: BigInt, b: bigInt): boolean;
+    export function millerRabin(x: BigInt, b: BigInt): boolean;
 
     // boolean millerRabinInt(x,b)
     // does one round of Miller-Rabin base integer b say that bigInt x is possibly prime? (b is int,    1<b<x)
