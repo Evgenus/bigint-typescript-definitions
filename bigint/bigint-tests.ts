@@ -74,3 +74,8 @@ BigInt.rightShift_(bi, num);
 BigInt.squareMod_(bi, bi);
 BigInt.subShift_(bi, bi, num);
 
+function someRandomRealCode() {
+    bi = BigInt.int2bigInt(22, 5);
+    bi = BigInt.str2bigInt("FFFFFFFFFFFFFFFFC90FDAA2", 16);
+    str = BigInt.bigInt2str(bi, 16);
+}
