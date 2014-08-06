@@ -2,13 +2,13 @@
 <package >
   <metadata>
     <id>BigInt.TypeScript.DefinitelyTyped</id>
-    <version>5.5.1.1</version>
+    <version>5.5.1.2</version>
     <authors>Evgenus</authors>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/Evgenus/bigint-typescript-definitions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Typescript definitions files for Big Integer library by Leemon</description>
-    <releaseNotes>Initial publishing</releaseNotes>
+    <releaseNotes>Comments fixed to be jsDoc</releaseNotes>
     <tags>bigint bignum leemon typesctipt definitions</tags>
   </metadata>
   <files>

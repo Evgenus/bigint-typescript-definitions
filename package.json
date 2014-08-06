@@ -1,6 +1,6 @@
 {
   "name": "bigint-typescript-definitions",
-  "version": "5.5.1-1",
+  "version": "5.5.1-2",
   "description": "Typescript definitions files for Big Integer library by Leemon",
   "scripts": {
     "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts"
