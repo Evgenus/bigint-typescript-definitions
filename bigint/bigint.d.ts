@@ -11,6 +11,11 @@ declare module BigInt {
         (): number;
     }
 
+    /**
+        Sets a random number generator.
+    
+        @param  {IRandom}   random  function that returns random number.
+     */
     export function setRandom(random: IRandom): void;
 
     /**
