@@ -24,8 +24,8 @@ declare module BigInt {
     /**
      * return (x+y) for bigInts x and y.
      *
-     * @param {BigInt} x The BigInt first argument to process.
-     * @param {BigInt} y The BigInt second argument to process.
+     * @param {BigInt} x The BigInt first summand.
+     * @param {BigInt} y The BigInt second summand.
      *
      * @return {BigInt} A result as BigInt.
      */
@@ -34,8 +34,8 @@ declare module BigInt {
     /**
      * return (x+n) where x is a bigInt and n is an integer.
      *
-     * @param {BigInt} x The BigInt first argument to process.
-     * @param {number} n The number second argument to process.
+     * @param {BigInt} x The BigInt first summand.
+     * @param {number} n The number second summand.
      *
      * @return {BigInt} A result as BigInt.
      */
@@ -114,7 +114,7 @@ declare module BigInt {
      *
      * @param {number} n Upper limit of search.
      *
-     * @return The found primes as Array.
+     * @return {Array} The found primes as Array.
      */
     export function findPrimes(n: number): number[];
 
@@ -124,159 +124,162 @@ declare module BigInt {
      * @param {BigInt} x The BigInt to process.
      * @param {BigInt} y The BigInt to process.
      *
-     * @return A greatest common divisor as BigInt.
+     * @return {BigInt} A greatest common divisor as BigInt.
      */
     export function GCD(x: BigInt, y: BigInt): BigInt;
 
     /**
      * is x>y?  (x and y are nonnegative bigInts)
      *
-     * @param {BigInt} x The BigInt to process.
-     * @param {BigInt} y The BigInt to process.
+     * @param {BigInt} x BigInt to be compared.
+     * @param {BigInt} y BigInt to be compared.
      *
-     * @return true if x is greater, false if it's not.
+     * @return {boolean} true if x is greater, false if it's not.
      */
     export function greater(x: BigInt, y: BigInt): boolean;
 
     /**
-        is (x <<(shift*bpe)) > y?
-    
-        @param  {BigInt}    x       The BigInt to process.
-        @param  {BigInt}    y       The BigInt to process.
-        @param  {number}    shift   The shift.
-    
-        @return true if x is greater, false if it's not.
+     * is (x <<(shift*bpe)) > y?
+     *
+     * @param {BigInt} x     BigInt to be compared.
+     * @param {BigInt} y     BigInt to be compared.
+     * @param {number} shift The shift amount in bits.
+     *
+     * @return {boolean} true if x is greater, false if it's not.
      */
     export function greaterShift(x: BigInt, y: BigInt, shift: number): boolean;
 
     /**
-        return a bigInt equal to integer t, with at least n bits and m array elements.
-    
-        @param  {number}    t   The number to process.
-        @param  {number=}   n   (Optional) the number to process.
-        @param  {number=}   m   (Optional) the number to process.
-    
-        @return A BigInt.
+     * return a bigInt equal to integer t, with at least n bits and m array elements.
+     *
+     * @param {number} t  The number to process.
+     * @param {number=} n (Optional) the number to process.
+     * @param {number=} m (Optional) the number to process.
+     *
+     * @return {BigInt} A BigInt equivalent of given number.
      */
     export function int2bigInt(t: number, n?: number, m?: number): BigInt;
 
     /**
-        return (x**(-1) mod n) for bigInts x and n.  If no inverse exists, it returns null.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    n   The BigInt to process.
-    
-        @return A BigInt.
+     * return (x**(-1) mod n) for bigInts x and n. If no inverse exists, it returns null.
+     *
+     * @param {BigInt} x The BigInt to process.
+     * @param {BigInt} n The BigInt to process.
+     *
+     * @return {BigInt} A BigInt result.
      */
     export function inverseMod(x: BigInt, n: BigInt): BigInt;
 
     /**
-        return x**(-1) mod n, for integers x and n.  Return 0 if there is no inverse.
-    
-        @param  {number}    x   The number to process.
-        @param  {number}    n   The number to process.
-    
-        @return A BigInt.
+     * return x**(-1) mod n, for integers x and n.  
+     * Return 0 if there is no inverse.
+     *
+     * @param {number} x The number to process.
+     * @param {number} n The number to process.
+     *
+     * @return {BigInt} A BigInt result.
      */
     export function inverseModInt(x: number, n: number): BigInt;
 
     /**
-        is the bigInt x equal to zero?
-    
-        @param  {BigInt}    x   The BigInt to process.
-    
-        @return true if zero, false if not.
+     * is the bigInt x equal to zero?
+     *
+     * @param {BigInt} x BigInt to be compared.
+     *
+     * @return {boolean} true if zero, false if not.
      */
     export function isZero(x: BigInt): boolean;
 
     /**
-        does one round of Miller-Rabin base integer b say that bigInt x is possibly prime? (b is bigInt, 1<b<x)
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    b   The BigInt to process.
-    
-        @return true if it is prime, false if it is not.
+     * does one round of Miller-Rabin base integer b say that bigInt x is possibly prime?
+     *
+     * @param {BigInt} x The BigInt to process.
+     * @param {BigInt} b The BigInt to process. (b is bigInt, 1<b<x)
+     *
+     * @return {boolean} true if it is prime, false if it is not.
      */
     export function millerRabin(x: BigInt, b: BigInt): boolean;
 
     /**
-        does one round of Miller-Rabin base integer b say that bigInt x is possibly prime? (b is int, 1<b<x)
-    
-        @param  {number}    x   The number to process.
-        @param  {number}    b   The number to process.
-    
-        @return true if it is prime, false if it is not.
+     * does one round of Miller-Rabin base integer b say that bigInt x is possibly prime?
+     *
+     * @param {number} x The number to process.
+     * @param {number} b The number to process. (b is int, 1<b<x)
+     *
+     * @return {boolean} true if it is prime, false if it is not.
      */
     export function millerRabinInt(x: number, b: number): boolean;
 
     /**
-        return a new bigInt equal to (x mod n) for bigInts x and n.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    n   The BigInt to process.
-    
-        @return A BigInt.
+     * return a new bigInt equal to (x mod n) for bigInts x and n.
+     *
+     * @param {BigInt} x The BigInt dividend.
+     * @param {BigInt} n The BigInt divider.
+     *
+     * @return {BigInt} A remainder as BigInt.
      */
     export function mod(x: BigInt, n: BigInt): BigInt;
 
     /**
-        return x mod n for bigInt x and integer n.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {number}    n   The number to process.
-    
-        @return A number.
+     * return x mod n for bigInt x and integer n.
+     *
+     * @param {BigInt} x The BigInt dividend.
+     * @param {number} n The number divider.
+     *
+     * @return A remainder as number.
      */
     export function modInt(x: BigInt, n: number): number;
 
     /**
-        return x*y for bigInts x and y. This is faster when y<x.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-    
-        @return A BigInt.
+     * return x*y for bigInts x and y. This is faster when y<x.
+     *
+     * @param {BigInt} x The BigInt first multiplier.
+     * @param {BigInt} y The BigInt second multiplier.
+     *
+     * @return A BigInt.
      */
     export function mult(x: BigInt, y: BigInt): BigInt;
 
     /**
-        return (x*y mod n) for bigInts x,y,n.  For greater speed, let y<x.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-        @param  {BigInt}    n   The BigInt to process.
-    
-        @return A BigInt.
+     * return (x*y mod n) for bigInts x,y,n. For greater speed, let y<x.
+     *
+     * @param {BigInt} x The BigInt first multiplier.
+     * @param {BigInt} y The BigInt second multiplier.
+     * @param {BigInt} n The BigInt divider.
+     *
+     * @return A remainder as BigInt.
      */
     export function multMod(x: BigInt, y: BigInt, n: BigInt): BigInt;
 
     /**
-        is bigInt x negative?
-    
-        @param  {BigInt}    x   The BigInt to process.
-    
-        @return true if x is negative, false if x is positive.
+     * is bigInt x negative?
+     *
+     * @param {BigInt} x BigInt to be compared.
+     *
+     * @return true if x is negative, false if x is positive.
      */
     export function negative(x: BigInt): boolean;
 
     /**
-        return (x**y mod n) where x,y,n are bigInts and ** is exponentiation.  0**0=1. Faster for odd n.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-        @param  {BigInt}    n   The BigInt to process.
-    
-        @return A BigInt.
+     * return (x**y mod n) where x,y,n are bigInts and ** is exponentiation.  
+     * *0=1. Faster for odd n.
+     *
+     * @param {BigInt} x The BigInt to process.
+     * @param {BigInt} y The BigInt power.
+     * @param {BigInt} n The BigInt divider.
+     *
+     * @return A remainder as BigInt.
      */
     export function powMod(x: BigInt, y: BigInt, n: BigInt): BigInt;
 
     /**
-        return an n-bit random BigInt (n>=1).  If s=1, then the most significant of those n bits is set to 1.
-    
-        @param  {number}    n   The number to process.
-        @param  {number}    s   The number to process.
-    
-        @return A BigInt.
+     * return an n-bit random BigInt (n>=1).  
+     * If s=1, then the most significant of those n bits is set to 1.
+     *
+     * @param {number} n The number of bits (n>=1).
+     * @param {number} s The sign bit.
+     *
+     * @return A random BigInt.
      */
     export function randBigInt(n: number, s: number): BigInt;
 
