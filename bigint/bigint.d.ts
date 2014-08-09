@@ -15,125 +15,126 @@ declare module BigInt {
     }
 
     /**
-        Sets a random number generator.
-    
-        @param  {IRandom}   random  function that returns random number.
+     * Sets a random number generator.
+     *
+     * @param {IRandom} random function that returns random number.
      */
     export function setRandom(random: IRandom): void;
 
     /**
-        return (x+y) for bigInts x and y.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-    
-        @return A BigInt.
+     * return (x+y) for bigInts x and y.
+     *
+     * @param {BigInt} x The BigInt first argument to process.
+     * @param {BigInt} y The BigInt second argument to process.
+     *
+     * @return {BigInt} A result as BigInt.
      */
     export function add(x: BigInt, y: BigInt): BigInt;
 
     /**
-        return (x+n) where x is a bigInt and n is an integer.
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {number}    n   The number to process.
-    
-        @return A BigInt.
+     * return (x+n) where x is a bigInt and n is an integer.
+     *
+     * @param {BigInt} x The BigInt first argument to process.
+     * @param {number} n The number second argument to process.
+     *
+     * @return {BigInt} A result as BigInt.
      */
     export function addInt(x: BigInt, n: number): BigInt;
 
-    interface bigInt2str_T<T> {
-
-        /**
-            return a string form of bigInt x in a given base, with 2 <= base <= 95.
-        
-            @param  {BigInt}    x           The BigInt to process.
-            @param  {string|number} base    The base.
-        
-            @return A string.
-         */
-        (x: BigInt, base: T): string;        
-    }
-
-    interface bigInt2strSignature extends bigInt2str_T<string>, bigInt2str_T<number>{
-    }
-
-
-    export var bigInt2str: bigInt2strSignature;
+    /**
+     * return a string form of bigInt x in a given base, with 2 <= base <= 95.
+     *
+     * @param {BigInt} x    The BigInt to stringify.
+     * @param {number} base The base as radix number.
+     *
+     * @return {string} A string representation of given BigInt.
+     */
+    export function bigInt2str(x: BigInt, base: number): string;
 
     /**
-        return how many bits long the bigInt x is, not counting leading zeros.
-    
-        @param  {BigInt}    x   The BigInt to process.
-    
-        @return A number.
+     * return a string form of bigInt x in a given base, with 2 <= base <= 95.
+     *
+     * @param {BigInt} x    The BigInt to stringify.
+     * @param {string} base The base as vocabulary of characters.
+     *
+     * @return {string} A string representation of given BigInt.
+     */
+    export function bigInt2str(x: BigInt, base: string): string;
+
+    /**
+     * return how many bits long the bigInt x is, not counting leading zeros.
+     *
+     * @param {BigInt} x The BigInt to process.
+     *
+     * @return {number} A size in BigInt as number.
      */
     export function bitSize(x: BigInt): number;
 
     /**
-        return a copy of bigInt x.
-    
-        @param  {BigInt}    x   The BigInt to process.
-    
-        @return A copy of this object.
+     * return a copy of bigInt x.
+     *
+     * @param {BigInt} x Source BigInt to be copied.
+     *
+     * @return {BigInt} A copy of this object.
      */
     export function dup(x: BigInt): BigInt;
 
     /**
-        is the bigInt x equal to the bigint y?
-    
-        @param  {BigInt}    x   Big int to be compared.
-        @param  {BigInt}    y   Big int to be compared.
-    
-        @return true if the objects are considered equal, false if they are not.
+     * is the bigInt x equal to the bigint y?
+     *
+     * @param {BigInt} x BigInt to be compared.
+     * @param {BigInt} y BigInt to be compared.
+     *
+     * @return {boolean} true if the objects are considered equal, false if they are not.
      */
     export function equals(x: BigInt, y: BigInt): boolean;
 
     /**
-        is bigint x equal to integer y?
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {number}    y   The number to process.
-    
-        @return true if the objects are considered equal, false if not.
+     * is bigint x equal to integer y?
+     *
+     * @param {BigInt} x BigInt to be compared.
+     * @param {BigInt} y BigInt to be compared.
+     *
+     * @return {boolean} true if the objects are considered equal, false if not.
      */
     export function equalsInt(x: BigInt, y: number): boolean;
 
     /**
-        return a copy of x with at least n elements, adding leading zeros if needed.
-    
-        @param  {BigInt}    value   The value.
-        @param  {number}    n       The number to process.
-    
-        @return A BigInt.
+     * return a copy of x with at least n elements, adding leading zeros if needed.
+     *
+     * @param {BigInt} value The source object to copy.
+     * @param {number} n     The minimal number of elements.
+     *
+     * @return {BigInt} A copy of given BigInt.
      */
     export function expand(value: BigInt, n: number): BigInt;
 
     /**
-        return array of all primes less than integer n.
-    
-        @param  {number}    n   The number to process.
-    
-        @return The found primes as Array.
+     * return array of all primes less than integer n.
+     *
+     * @param {number} n Upper limit of search.
+     *
+     * @return The found primes as Array.
      */
     export function findPrimes(n: number): number[];
 
     /**
-        return greatest common divisor of bigInts x and y (each with same number of elements).
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-    
-        @return A BigInt.
+     * return greatest common divisor of bigInts x and y (each with same number of elements).
+     *
+     * @param {BigInt} x The BigInt to process.
+     * @param {BigInt} y The BigInt to process.
+     *
+     * @return A greatest common divisor as BigInt.
      */
     export function GCD(x: BigInt, y: BigInt): BigInt;
 
     /**
-        is x>y?  (x and y are nonnegative bigInts)
-    
-        @param  {BigInt}    x   The BigInt to process.
-        @param  {BigInt}    y   The BigInt to process.
-    
-        @return true if x is greater, false if it's not.
+     * is x>y?  (x and y are nonnegative bigInts)
+     *
+     * @param {BigInt} x The BigInt to process.
+     * @param {BigInt} y The BigInt to process.
+     *
+     * @return true if x is greater, false if it's not.
      */
     export function greater(x: BigInt, y: BigInt): boolean;
 
@@ -297,25 +298,31 @@ declare module BigInt {
      */
     export function randProbPrime(k: number): BigInt;
 
-    interface str2bigInt_T<T> {
+    /**
+     * return a bigInt for number represented in string s in base b with at least n bits and m array
+     * elements.
+     *
+     * @param {string} s  The string representation of number.
+     * @param {number} b  The base as radix number.
+     * @param {number=} n (Optional) minimal bit length as number.
+     * @param {number=} m (Optional) the number of array elements as number.
+     *
+     * @return A BigInt.
+     */
+    export function str2bigInt(s: string, b: number, n?: number, m?: number): BigInt;
 
-        /**
-            return a bigInt for number represented in string s in base b with at least n bits and m array elements.
-        
-            @param  {string}    s       The string representation of number.
-            @param  {number|string} b   The base as number or string vocabulary of characters.
-            @param  {number=}   n       (Optional) minimal bit length as number.
-            @param  {number}    m       (Optional) the number of array elements as number.
-        
-            @return A BigInt.
-         */
-        (s: string, b: T, n?: number, m?: number): BigInt;
-    }
-
-    interface str2bigIntSignature extends str2bigInt_T<number>, str2bigInt_T<string> {
-    }
-
-    export var str2bigInt: str2bigIntSignature;
+    /**
+     * return a bigInt for number represented in string s in base b with at least n bits and m array
+     * elements.
+     *
+     * @param {string} s  The string representation of number.
+     * @param {string} b  The base as string vocabulary of characters.
+     * @param {number=} n (Optional) minimal bit length as number.
+     * @param {number=} m (Optional) the number of array elements as number.
+     *
+     * @return A BigInt.
+     */
+    export function str2bigInt(s: string, b: string, n?: number, m?: number): BigInt;
 
     /**
         return (x-y) for bigInts x and y.  Negative answers will be 2s complement.
