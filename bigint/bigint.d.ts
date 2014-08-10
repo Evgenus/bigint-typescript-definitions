@@ -351,6 +351,8 @@ declare module BigInt {
 
     /**
      * do x=x+n where x is a bigInt and n is an integer.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt accumulator.
      * @param {number} n The number addend.
@@ -359,6 +361,8 @@ declare module BigInt {
 
     /**
      * do x=x+y for bigInts x and y.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt accumulator.
      * @param {BigInt} y The BigInt addend.
@@ -367,6 +371,8 @@ declare module BigInt {
 
     /**
      * do x=y on bigInts x and y.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt destination.
      * @param {BigInt} y The BigInt source.
@@ -375,6 +381,8 @@ declare module BigInt {
 
     /**
      * do x=n on bigInt x and integer n.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt destination.
      * @param {number} n The number source.
@@ -384,6 +392,8 @@ declare module BigInt {
     /**
      * set x to the greatest common divisor of bigInts x and y, (y is destroyed).
      *  This never overflows its array.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt first dividend.
      * @param {BigInt} y The BigInt second dividend.
@@ -392,6 +402,8 @@ declare module BigInt {
 
     /**
      * do x=x**(-1) mod n, for bigInts x and n. Returns 1 (0) if inverse does (doesn't) exist.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt base and the remainder result.
      * @param {BigInt} n The BigInt divisor.
@@ -402,6 +414,8 @@ declare module BigInt {
 
     /**
      * do x=x mod n for bigInts x and n. (This never overflows its array).
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt dividend and the remaider result.
      * @param {BigInt} n The BigInt divisor.
@@ -410,6 +424,8 @@ declare module BigInt {
 
     /**
      * do x=x*y for bigInts x and y.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt multiplicand and the product result.
      * @param {BigInt} y The BigInt multiplier.
@@ -418,6 +434,8 @@ declare module BigInt {
 
     /**
      * do x=x*y mod n for bigInts x,y,n.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt multiplicand and the remainder result.
      * @param {BigInt} y The BigInt multiplier.
@@ -428,6 +446,8 @@ declare module BigInt {
     /**
      * do x=x**y mod n, where x,y,n are bigInts (n is odd) and ** is exponentiation.
      *  0**0=1.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt base and the remainder result.
      * @param {BigInt} y The BigInt exponent.
@@ -438,6 +458,8 @@ declare module BigInt {
     /**
      * do b = an n-bit random BigInt.
      *  if s=1, then nth bit (most significant bit) is set to 1. n>=1.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} b The BigInt destination.
      * @param {number} n The number of bits.
@@ -447,6 +469,8 @@ declare module BigInt {
 
     /**
      * do ans = a random k-bit true random prime (not just probable prime) with 1 in the msb.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} ans The destination.
      * @param {number} k   The number of bits.
@@ -455,6 +479,8 @@ declare module BigInt {
 
     /**
      * do x=x-y for bigInts x and y. Negative answers will be 2s complement.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt minuend and the result difference.
      * @param {BigInt} y The BigInt subtrahend .
@@ -463,6 +489,8 @@ declare module BigInt {
 
     /**
      * do x=x+(y<<(ys*bpe))
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x  The BigInt accumulator.
      * @param {BigInt} y  The BigInt addend to be shifted.
@@ -472,6 +500,8 @@ declare module BigInt {
 
     /**
      * do carries and borrows so each element of the bigInt x fits in bpe bits.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt to process.
      */
@@ -479,6 +509,8 @@ declare module BigInt {
 
     /**
      * divide x by y giving quotient q and remainder r.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt dividend.
      * @param {BigInt} y The BigInt divisor.
@@ -490,6 +522,8 @@ declare module BigInt {
     /**
      * do x=floor(x/n) for bigInt x and integer n, and return the remainder.
      *  This never overflows its array.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt dividend and the quotient result.
      * @param {number} n The number divisor.
@@ -500,6 +534,8 @@ declare module BigInt {
 
     /**
      * sets a,b,d to positive bigInts such that d = GCD_(x,y) = a*x-b*y.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt to process.
      * @param {BigInt} y The BigInt to process.
@@ -512,6 +548,8 @@ declare module BigInt {
     /**
      * do x=floor(|x|/2)*sgn(x) for bigInt x in 2's complement.  
      *  This never overflows its array.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt to process.
      */
@@ -519,6 +557,8 @@ declare module BigInt {
 
     /**
      * left shift bigInt x by n bits.  n<bpe.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt to process.
      * @param {number} n The number of bits.
@@ -527,6 +567,8 @@ declare module BigInt {
 
     /**
      * do x=a*x+b*y for bigInts x and y and integers a and b.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt first multiplicand.
      * @param {BigInt} y The BigInt second multiplicand.
@@ -537,6 +579,8 @@ declare module BigInt {
 
     /**
      * do x=x+b*(y<<(ys*bpe)) for bigInts x and y, and integers b and ys.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x  The BigInt to process.
      * @param {BigInt} y  The BigInt to process.
@@ -547,6 +591,8 @@ declare module BigInt {
 
     /**
      * Montgomery multiplication (see comments where the function is defined)
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x  The BigInt to process.
      * @param {BigInt} y  The BigInt to process.
@@ -557,6 +603,8 @@ declare module BigInt {
 
     /**
      * do x=x*n where x is a bigInt and n is an integer.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt multiplicand and the result product.
      * @param {number} n The number multiplier.
@@ -566,6 +614,8 @@ declare module BigInt {
     /**
      * right shift bigInt x by n bits.  0 <= n < bpe.
      *  This never overflows its array.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt to process.
      * @param {number} n The number to process.
@@ -574,6 +624,8 @@ declare module BigInt {
 
     /**
      * do x=x*x mod n for bigInts x,n.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x The BigInt base and the result remainder.
      * @param {BigInt} n The BigInt divisor.
@@ -582,6 +634,8 @@ declare module BigInt {
 
     /**
      * do x=x-(y<<(ys*bpe)). Negative answers will be 2s complement.
+     * 
+     * @private Intend to be internal funtion.
      *
      * @param {BigInt} x  The BigInt minuend and the result difference.
      * @param {BigInt} y  The BigInt shifted subtrahend .
