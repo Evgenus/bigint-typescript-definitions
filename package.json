@@ -3,7 +3,8 @@
   "version": "5.5.1-2",
   "description": "Typescript definitions files for Big Integer library by Leemon",
   "scripts": {
-    "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts"
+    "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts",
+    "gen-docs": "typedoc --out ./docs ./bigint/bigint.d.ts --includeDeclarations --name \"BigInt Typescript Definitions\""
   },
   "repository": {
     "type": "git",
