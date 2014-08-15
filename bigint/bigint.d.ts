@@ -25,7 +25,7 @@ declare module BigInt {
      * return (x+y) for bigInts x and y.
      *
      * @param {BigInt} x The BigInt augend.
-     * @param {BigInt} y The BigInt addend .
+     * @param {BigInt} y The BigInt addend.
      *
      * @return {BigInt} A sum as BigInt.
      */
