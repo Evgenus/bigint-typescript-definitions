@@ -1,5 +1,7 @@
 #bigint-typescript-definitions
 
+[Documentation](http://evgenus.github.io/bigint-typescript-definitions/)
+
 Typescript definitions files for [Big Integer library by Leemon](https://github.com/Evgenus/BigInt)
 
 This code was detached from [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) to have repository unrestricted with community rules.
