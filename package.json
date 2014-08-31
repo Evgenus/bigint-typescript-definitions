@@ -4,7 +4,7 @@
   "description": "Typescript definitions files for Big Integer library by Leemon",
   "scripts": {
     "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts",
-    "gen-docs": "typedoc --out ./docs ./bigint/bigint.d.ts --includeDeclarations --name \"BigInt Typescript Definitions\" --verbose"
+    "gen-docs": "typedoc --out ./docs ./bigint/bigint.d.ts --includeDeclarations --name \"BigInt Typescript Definitions\" --verbose --gaID UA-24575561-2"
   },
   "repository": {
     "type": "git",
