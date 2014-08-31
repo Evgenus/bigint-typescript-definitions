@@ -1,0 +1,4 @@
+[submodule "docs"]
+	path = docs
+	url = .
+	branch = gh-pages

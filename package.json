@@ -1,6 +1,6 @@
 {
   "name": "bigint-typescript-definitions",
-  "version": "5.5.1-2",
+  "version": "5.5.1-3",
   "description": "Typescript definitions files for Big Integer library by Leemon",
   "scripts": {
     "test": "tsc --noImplicitAny --outDir temp --module commonjs bigint/bigint-tests.ts",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Evgenus/bigint-typescript-definitions/issues"
   },
-  "homepage": "https://github.com/Evgenus/bigint-typescript-definitions",
+  "homepage": "http://evgenus.github.io/bigint-typescript-definitions/",
   "devDependencies": {
     "typescript": "^1.0.1"
   }
