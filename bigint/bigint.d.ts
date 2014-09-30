@@ -1,4 +1,4 @@
-﻿// Type definitions for BigInt v5.5.1
+﻿// Type definitions for BigInt v5.5.3
 // Project: https://github.com/Evgenus/BigInt
 // Definitions by: Eugene Chernyshov <https://github.com/Evgenus>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -262,7 +262,7 @@ declare module BigInt {
 
     /**
      * return (x**y mod n) where x,y,n are bigInts and ** is exponentiation.
-     *  0=1. Faster for odd n.
+     *  0**0=1. Faster for odd n.
      *
      * @param {BigInt} x The BigInt base.
      * @param {BigInt} y The BigInt exponent.
